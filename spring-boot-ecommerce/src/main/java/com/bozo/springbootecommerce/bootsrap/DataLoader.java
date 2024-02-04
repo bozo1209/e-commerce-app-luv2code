@@ -20,7 +20,7 @@ public class DataLoader implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        ProductCategory productCategory = productCategoryRepository.save(ProductCategory.builder().build());
+        ProductCategory productCategory = productCategoryRepository.save(ProductCategory.builder().categoryName("Books").build());
 
         productRepository.save(Product.builder()
                 .sku("BOOK-TECH-1000")
