@@ -29,7 +29,7 @@ export class ProductService {
   }
 
   searchProducts(keyword: string): Observable<Product[]>{
-    const searchUrl = `${this.baseUrl}/search/findByNameContaining?name=${keyword}`
+    const searchUrl = `${this.baseUrl}/search/findByNameContainingIgnoreCase?name=${keyword}`
 
     return this.getProducts(searchUrl);
   }
